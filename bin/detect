@@ -1,0 +1,8 @@
+#!bin/sh
+
+echo "in custom buildpack detect stage"
+
+echo "APPLICATION_ROOT: $1"
+echo "APPLICATION DIR LIST: $(ls -l $1)"
+
+exit 0

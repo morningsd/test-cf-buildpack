@@ -1,0 +1,22 @@
+---
+language: ruby
+
+url_to_dependency_map:
+- match: ruby-(\d+\.\d+\.\d+)
+  name: ruby
+  version: $1
+
+dependencies:
+  - name: ruby
+    version: 2.1.4
+    uri: https://pivotal-buildpacks.s3.amazonaws.com/ruby/binaries/lucid64/ruby-2.1.4.tgz
+    sha256: e3e6023764357324260e9efab1f1690b7bcc0c69f82e8589797b262eb5df2831
+    cf_stacks:
+      - cflinuxfs3
+
+include_files:
+- bin/detect
+- bin/finalize
+- bin/release
+- bin/supply
+- manifest.yml
